@@ -1,0 +1,397 @@
+/* ============================
+   GLOBAL
+============================ */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* ============================
+   HEADER
+============================ */
+.header {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a90e2;
+  color: white;
+  border-radius: 10px;
+  width: 90%;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ 
+
+
+.addTaskBtn {
+  background: #27ae60;
+  padding: 8px 15px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.addTaskBtn:hover {
+  background: #1e8449;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+.navbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.navbar input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 250px;
+  transition: 0.3s ease;
+}
+.navbar input:focus {
+  border: 1px solid #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+.navBtn {
+  padding: 13px 18px;
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.navBtn.active {
+  background: #4a90e2;
+  color: white;
+}
+
+.navBtn:hover:not(.active) {
+  background: #d0e4ff;
+}
+
+/* ============================
+   TODOLIST CARD
+============================ */
+.todolist {
+  width: 100%;
+  max-width: 550px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+}
+
+.todolist:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================
+   HEADER IN CARD
+============================ */
+.App-header {
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(90deg, rgb(0, 153, 255), rgb(0, 102, 204));
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.App-title {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.App-header p {
+  color: #f0f0f0;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ============================
+   INPUTS
+============================ */
+.input-section {
+  margin-bottom: 16px;
+}
+
+.input-section label {
+  display: block;
+  font-weight: 700;
+  color: #2981b9;
+  margin-bottom: 6px;
+}
+
+.taskInput {
+  width: 95%;
+  padding: 12px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.taskInput:focus {
+  background: #fff;
+  border-color: rgb(0, 153, 255);
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 153, 255, 0.4);
+}
+
+.error-task {
+  display: block;
+  margin-top: 4px;
+  color: red;
+  font-size: 13px;
+}
+
+/* ============================
+   ADD BUTTON
+============================ */
+.addTask {
+  width: 100%;
+  padding: 12px;
+  background: rgb(0, 153, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.addTask:hover {
+  background: rgb(0, 132, 225);
+}
+
+/* ============================
+   TABLE
+============================ */
+.task-table {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.task-table thead {
+  background: rgb(0, 153, 255);
+  color: white;
+}
+
+.task-table th,
+.task-table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.task-table tr td {
+  color: #666;
+}
+
+.task-table tr:hover td {
+  background: #f7faff;
+}
+
+/* ============================
+   ACTION BUTTONS
+============================ */
+.deleteBtn {
+  background: #e74c3c;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background: #c0392b;
+}
+
+.updateBtn {
+  background: #f1c40f;
+  color: black;
+  padding: 6px 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.updateBtn:hover {
+  background: #d4ac0d;
+}
+
+/* ============================
+   EMPTY STATE
+============================ */
+.empty-state {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #999;
+}
+
+.navBtn {
+  padding: 10px 18px;
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.navBtn.active {
+  background: #4a90e2;
+  color: white;
+}
+
+
+/* ============================
+   ENHANCED MEDIA QUERIES
+============================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .todolist {
+    padding: 15px;
+    margin: 20px;
+  }
+
+  .App-header {
+    padding: 30px 20px;
+  }
+
+  .App-title {
+    font-size: 28px;
+  }
+
+  .navbar input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .addTaskBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 576px) {
+  .todolist {
+    padding: 12px;
+    margin: 15px;
+  }
+
+  .App-header {
+    padding: 25px 15px;
+  }
+
+  .App-title {
+    font-size: 22px;
+  }
+
+  .taskInput, .addTask {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .deleteBtn, .updateBtn {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .header {
+    padding: 15px 20px;
+    gap: 8px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Phones */
+@media (max-width: 400px) {
+  .App-title {
+    font-size: 20px;
+  }
+
+  .App-header p {
+    font-size: 14px;
+  }
+
+  .taskInput, .addTask {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .deleteBtn, .updateBtn {
+    font-size: 11px;
+    padding: 3px 5px;
+  }
+
+  .todolist {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+  }
+}
