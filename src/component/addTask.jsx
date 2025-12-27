@@ -46,7 +46,7 @@ function AddTask() {
     <div className="container my-5">
       <form
         onSubmit={handleSubmit}
-        className="bg-white rounded-4 shadow-lg p-1 mx-auto"
+        className="bg-white rounded-4 shadow-lg p-3 mx-auto"
         style={{ maxWidth: "600px" }}
       >
         {/* Header */}
@@ -81,7 +81,9 @@ function AddTask() {
 
         {/* Date Input */}
         <div className="mb-4">
-          <label className="form-label fw-semibold text-primary">Date finished</label>
+          <label className="form-label fw-semibold text-primary">
+            Date finished
+          </label>
           <input
             type="datetime-local"
             name="taskDateInput"
@@ -101,6 +103,10 @@ function AddTask() {
           <button type="submit" className="btn btn-primary btn-lg">
             <FaPlusCircle className="me-2" /> Add Task
           </button>
+        </div>
+        <hr style={{fontWeight:"bold", padding:"12px"}}/>
+        <div className="card-footer text-center text-muted">
+          Task Manager App
         </div>
       </form>
     </div>
